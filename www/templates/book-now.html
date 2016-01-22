@@ -1,0 +1,52 @@
+<ion-view view-title="Book Now">
+  <ion-content>
+    <div class="booknow_image_box">
+      <div class="booknow_hotel_image">
+        <img ng-src="{{chat.hotelimage}}">
+      </div>
+      <div class="booknow_hotel_title"><h3>{{chat.hotelname}}</h3></div>
+    </div>
+    <div class="booking_detail_box">
+      <div class="booking_info_row">
+        <div class="row">
+          <div class="col-50"><p class="left_text">Check-in</p></div>
+          <div class="col-50"><p class="right_text">Mon, Jan 18</p></div>
+        </div>
+        <div class="row">
+          <div class="col-50"><p class="left_text">Check-out</p></div>
+          <div class="col-50"><p class="right_text">Tue, Jan 19</p></div>
+        </div>
+      </div>
+      <div class="booking_info_row">
+        <div class="row">
+          <div class="col-50"><p class="left_text">Room Type</p></div>
+          <div class="col-50"><p class="right_text blue_color">Room with 2 beds</p></div>
+        </div>
+      </div>
+      <div class="booking_info_row">
+        <div class="row">
+          <div class="col-50"><p class="left_text">Room (1 night)</p></div>
+          <div class="col-50"><p class="right_text">$109</p></div>
+        </div>
+        <div class="row">
+          <div class="col-50"><p class="left_text">Taxes & Fees</p></div>
+          <div class="col-50"><p class="right_text">$12</p></div>
+        </div>
+      </div>
+      <div class="total_amount">
+        <div class="row">
+          <div class="col-50"><p class="left_text">Total</p></div>
+          <div class="col-50"><p class="right_text">$121</p></div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+  <div class="booknow_button">
+    <ion-item class="booknow_inner" href="#/tab/chats/{{chat.id}}/booknow/guest-info">ADD GUEST INFO</ion-item>
+  </div>
+
+</ion-view>
+
+
+

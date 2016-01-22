@@ -1,0 +1,172 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<!--<ion-view view-title="{{chat.name}}">-->
+  <!--<ion-content class="padding">-->
+    <!--<img ng-src="{{chat.face}}" style="width: 64px; height: 64px">-->
+    <!--<p>-->
+      <!--{{chat.lastText}}-->
+    <!--</p>-->
+  <!--</ion-content>-->
+<!--</ion-view>-->
+
+
+<ion-view view-title="{{chat.hotelname}}">
+  <ion-content>
+
+      <ion-slide-box auto-play="true" does-continue="true" on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <div class="box blue"><img ng-src="{{chat.hotelimage}}"></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box yellow"><img ng-src="{{chat.hotelimage}}"></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box pink"><img ng-src="{{chat.hotelimage}}"></div>
+        </ion-slide>
+      </ion-slide-box>
+
+      <div class="hotel_details_box">
+          <div class="map_title_box">
+            <div class="hotel_title">{{chat.hotelname}}</div>
+            <div class="hotel_rating">
+              <p>SOLID</p><span><i class="icon ion-thumbsup"></i> 96% (491 reviews)</span>
+            </div>
+          </div>
+          <div class="google_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d165260.7986281261!2d90.45029690462364!3d23.755143901430813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1452856103998" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="bg_custom border_bottom">
+            <div class="row">
+              <div class="col-80">
+                <h5 class="title_2">300 Meadow ave</h5>
+                <p class="global_content">Scarnton,PA</p>
+              </div>
+              <div class="col">
+                <div class="temparature"><p class="global_content"> <i class="icon ion-person"></i> </p></div>
+              </div>
+            </div>
+          </div>
+          <div class="bg_custom border_bottom">
+            <div class="row">
+              <div class="col-80">
+                <h5 class="title_2">Forcast some</h5>
+                <p class="global_content">lorem</p>
+              </div>
+              <div class="col">
+                <div class="temparature"><p class="global_content"> 33&deg;|55&deg; </p></div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel_description">
+              <h3>Why we like it</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur dolor, eligendi est excepturi fugiat hic iusto libero maiores minus natus neque non perferendis ratione repudiandae totam ullam vitae voluptatibus?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequatur dolor, eligendi est excepturi fugiat hic iusto libero maiores minus natus neque non perferendis ratione repudiandae totam ullam vitae voluptatibus?</p>
+          </div>
+          <div class="home_rooms_quote">
+            <h3>"modern home rooms near the site"</h3>
+          </div>
+
+          <div class="tabing_contents border_bottom">
+              <h4 class="tabing_title">Amenities</h4>
+              <md-content class="global_background">
+
+                  <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab class="hotel_tab_menu" label="Hotel">
+                      <md-content class="md-padding global_background tabbox_menu">
+                        <ul>
+                          <li><i class="icon ion-clipboard"></i> 132 rooms</li>
+                          <li><i class="icon ion-stats-bars"></i> complimentary wifi</li>
+                          <li><i class="icon ion-image"></i> No self-packing</li>
+                          <li><i class="icon ion-bag"></i> Fitness center with cardio</li>
+                          <li><i class="icon ion-load-b"></i> Dogs ok under 50 Ibs</li>
+                          <li><i class="icon ion-pricetags"></i> Lorem ipsum</li>
+                        </ul>
+                      </md-content>
+                    </md-tab>
+                    <md-tab class="hotel_tab_menu" label="Room">
+                      <md-content class="md-padding global_background tabbox_menu">
+                        <ul>
+                          <li><i class="icon ion-clipboard"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-stats-bars"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-image"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-bag"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-load-b"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-pricetags"></i> Lorem ipsum</li>
+                        </ul>
+                      </md-content>
+                    </md-tab>
+                    <md-tab class="hotel_tab_menu" label="Food">
+                      <md-content class="md-padding global_background tabbox_menu">
+                        <ul>
+                          <li><i class="icon ion-clipboard"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-stats-bars"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-image"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-bag"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-load-b"></i> Lorem ipsum</li>
+                          <li><i class="icon ion-pricetags"></i> Lorem ipsum</li>
+                        </ul>
+                      </md-content>
+                    </md-tab>
+                  </md-tabs>
+
+              </md-content>
+          </div>
+
+          <div class="guest_think_wrap">
+            <div class="custom_heading">what HT Guests Think</div>
+            <div class="row">
+              <div class="col-75">
+                <div class="guest_subtitle">96% Liked it</div>
+              </div>
+              <div class="col"><span class="guset_reviews">498 Reviews</span></div>
+            </div>
+            <div class="likebox_wrapper">
+              <div class="like_box_inner">
+                <span class="like_row"><i class="icon ion-thumbsup"></i> Jan 4, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur est excepturi ipsum iste iure libero odio omnis, velit veniam. Cum expedita incidunt nemo odit pariatur porro rem veritatis voluptas.</p>
+              </div>
+              <div class="like_box_inner">
+                <span class="like_row"><i class="icon ion-thumbsup"></i> Jan 4, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur est excepturi ipsum iste iure libero odio omnis, velit veniam. Cum expedita incidunt nemo odit pariatur porro rem veritatis voluptas.</p>
+              </div>
+              <div class="like_box_inner">
+                <span class="like_row"><i class="icon ion-thumbsup"></i> Jan 4, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur est excepturi ipsum iste iure libero odio omnis, velit veniam. Cum expedita incidunt nemo odit pariatur porro rem veritatis voluptas.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="needto_know_wrap">
+              <div class="custom_heading">What do you know?</div>
+              <div class="custom_tex_list">
+                <ul>
+                  <li><span>&nbsp;</span> Check-in 4pm. Check-out 11am</li>
+                  <li><span>&nbsp;</span> 18+ to book</li>
+                  <li><span>&nbsp;</span> Photo ID and credit card required in check</li>
+                  <li><span>&nbsp;</span> 100% non-smoking rooms</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="clear"></div>
+      </div>
+  </ion-content>
+
+  <div class="booknow_button">
+    <ion-item class="booknow_inner" href="#/tab/chats/{{chat.id}}/booknow">Book Now | $50 Avg/Night</ion-item>
+  </div>
+</ion-view>
+
+
+
+
+
+
+
+
