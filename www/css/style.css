@@ -20,7 +20,7 @@ a{text-decoration:none;}
 .hotel_image img{
   width: 100%;
   min-height: 180px;
-  max-height: 180px;
+  /*max-height: 180px;*/
 }
 .hotel_placeholder{
   width: 100%;
@@ -31,7 +31,7 @@ a{text-decoration:none;}
   background: url("../img/bg_placeholder.png") repeat;
 }
 .hotel_title{
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   color: #ffffff;
   font-weight: 600;
@@ -39,7 +39,7 @@ a{text-decoration:none;}
 }
 .hotel_subtitle{
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
   color: #ffffff;
   font-weight: 400;
 }
@@ -59,16 +59,17 @@ a{text-decoration:none;}
   color: #ffffff;
 }
 .hotel_price_box p{
-  font-size: 11px;
-  color: #ffffff;
-  margin: 0;
-  text-decoration: line-through;
+    font-size: 11px;
+    color: #ffffff;
+    margin: 0;
+    text-decoration: line-through;
 }
 .hotel_price_box h4{
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 600;
-  margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 7px 0 0 0;
+    text-align: right;
 }
 .no_padding_tb{
   padding-top: 0;
@@ -104,6 +105,9 @@ h2.welcome_title{
   color: #ffffff;
   font-weight: 600;
   text-transform: capitalize;
+}
+.box img {
+    width: 100%;
 }
 .google_map{
   width: 100%;
@@ -442,6 +446,42 @@ a.social_items i{
   margin: 18px 0;
   font-size: 15px;
 }
+/*------------------*/
+
+
+
+
+
+
+/*========== media quries =========*/
+
+@media only screen and (max-width: 479px) {
+    .hotel_image img{
+        min-height: 170px;
+        max-height: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .hotel_image img{
+        min-height: 200px;
+        max-height: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+
 
 
 

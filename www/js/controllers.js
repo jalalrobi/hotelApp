@@ -1,12 +1,11 @@
 angular.module('starter.controllers', [])
 
-
-.controller('customersCtrl', function($scope, $http) {
-    $http.get("http://angryhosting.eu/projects/test/customers.php").then(function(response) {
-        console.log(response);
-        $scope.myData = response.data.records;
-    });
-})
+//.controller('customersCtrl', function($scope, $http) {
+//    $http.get("http://jewel:92/api/hotellists/key").then(function(response) {
+//        console.log(response);
+//        $scope.hotelData = response.data.data;
+//    });
+//})
 
 
 .controller('BookCtrl', function($scope) {})
@@ -17,7 +16,7 @@ angular.module('starter.controllers', [])
 
 .controller('SigninCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope, Chats, $http) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -26,14 +25,25 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+    $http.get("http://jewel:92/api/hotellists/key").then(function(response) {
+        console.log(response);
+        $scope.hotelData = response.data.data;
+    });
+
+    $scope.chats = Chats.all();
+    $scope.remove = function(chat) {
+        Chats.remove(chat);
+    };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, $http) {
   $scope.chat = Chats.get($stateParams.chatId);
+    $scope.title = $stateParams.name;
+    $scope.hotelDetailsData = {};
+    $http.get("http://jewel:92/api/hoteldetails/key="+$stateParams.chatId+"&slug="+$stateParams.slug).then(function(response) {
+        console.log(response);
+        $scope.hotelDetailsData = response.data.data[0];
+    });
 })
 
 .controller('AccountCtrl', function($scope) {

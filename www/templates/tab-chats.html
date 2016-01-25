@@ -50,37 +50,30 @@
         <!--</div>-->
       </div>
 
-      <ion-item class="hotel_box_wrapper" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <div class="hotel_image">
-          <img ng-src="{{chat.hotelimage}}">
+        <div>
+            <ion-item class="hotel_box_wrapper" ng-repeat="x in hotelData" type="item-text-wrap" href="#/tab/chats/{{x.id}}/{{x.name}}/{{x.slug}}">
+                <div class="hotel_image">
+                    <img ng-src="{{$root.BaseURL+x.featured_image}}">
+                </div>
+                <div class="hotel_placeholder">
+                    <div class="row">
+                        <div class="col col-66 no_padding_tb">
+                            <div class="hotel_title">{{x.name}}</div>
+                            <!--<div class="hotel_rating">-->
+                                <!--<p>Solid</p><span><i class="icon ion-thumbsup"></i> 90%</span>-->
+                            <!--</div>-->
+                            <div class="hotel_subtitle">{{x.address}}</div>
+                        </div>
+                        <div class="col no_padding_tb">
+                            <div class="hotel_price_box">
+                                <!--<p>was $100</p>-->
+                                <h4>{{x.price_start}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
         </div>
-        <div class="hotel_placeholder">
-          <div class="row">
-            <div class="col col-80 no_padding_tb">
-              <div class="hotel_title">{{chat.hotelname}}</div>
-              <div class="hotel_rating">
-                <p>Solid</p><span><i class="icon ion-thumbsup"></i> 90%</span>
-              </div>
-              <div class="hotel_subtitle">{{chat.lastText}}</div>
-            </div>
-            <div class="col no_padding_tb">
-              <div class="hotel_price_box">
-                <p>was $100</p>
-                <h4>$70</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-
-
-        <!--<div ng-controller="customersCtrl">-->
-            <!--<ul>-->
-                <!--<li ng-repeat="x in myData">-->
-                    <!--{{ x.Name + ', ' + x.Country }}-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</div>-->
 
 
     </ion-list>

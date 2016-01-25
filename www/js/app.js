@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starter.services', 'ngMap'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
       StatusBar.styleDefault();
     }
   });
+        $rootScope.BaseURL = "http://jewel:92/";
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -70,7 +71,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/chats/:chatId/:name/:slug',
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
@@ -119,6 +120,11 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
     controller: 'SigninCtrl'
   });
 
+    //.state('search', {
+    //    //url: '/signin',
+    //    //templateUrl: 'templates/user-signin.html',
+    //    controller: 'SearchCtrl'
+    //});
 
 
   // if none of the above states are matched, use this as the fallback
