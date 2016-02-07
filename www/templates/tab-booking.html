@@ -1,5 +1,21 @@
 <ion-view view-title="Bookings">
-  <ion-content class="padding">
-    <h2 class="welcome_title">Book Now</h2>
+  <!--<ion-content class="padding" on-swipe-right="goBack()" on-swipe-left="goForward()">-->
+    <!--<h2 class="welcome_title">Book Now</h2>-->
+  <!--</ion-content>-->
+  <ion-content class="padding" on-swipe-right="goBack()" on-swipe-left="goForward()">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Name" ng-model="userInfo.name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Latitude" ng-model="userInfo.lat">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Longitude" ng-model="userInfo.lon">
+      </label>
+      <button class="button button-full button-positive" ng-click="SubmitPost(userInfo)">
+        Submit
+      </button>
+    </div>
   </ion-content>
 </ion-view>

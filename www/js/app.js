@@ -24,8 +24,9 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
         $rootScope.BaseURL = "http://jewel:92/";
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
 
+    $ionicConfigProvider.tabs.position('bottom'); // other values: top
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -36,7 +37,8 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+      controller: 'AppCtrl'
   })
 
   // Each tab has its own nav history stack:

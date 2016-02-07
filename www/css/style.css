@@ -401,6 +401,9 @@ p.blue_color{
 .bar-stable .button.button-clear{
   color: #387ef5;
 }
+.ng_googlemap{
+    height: 200px;
+}
 /*---------------------*/
 h3.innerpage_title{
   font-size: 22px;
